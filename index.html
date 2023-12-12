@@ -68,6 +68,7 @@
                     <button href="tel:+1(888) 860-0924" class="call_us_b">1(888) 860-0924</button><br>
 
                     <h3>Act fast! A Debt Specialist Is Waiting With Your Free Review 0:01</h3>
+                    <div id="loader" class="loader"></div>
                 </div>
                 <p id="question">Do You Live In The United States?<span style="color: red;"> *</span></p>
                 <div id="options">
@@ -149,6 +150,7 @@
 </body>
 
 <script>
+    let loader = document.getElementById("loader");
     let progress = document.querySelector(".w3-light-grey");
     let button = document.querySelector(".options");
     let button2 = document.querySelector(".options2")
@@ -192,6 +194,8 @@
                 }, 2000);
                 setTimeout(() => {
                     p.innerHTML = "Confirming Your Eligibility";
+                    loader.style.display = "block";
+                    p.style.color = "#666666";
                     greeBar.style.width = "100%";
                     greeBar.innerHTML = "100%";
                 }, 4000);
@@ -199,6 +203,7 @@
                     progress.style.display = "none";
                     p.style.display = "none";
                     greeBar.style.width = "100%";
+                    loader.style.display = "none";
                     greeBar.innerHTML = "100%";
                     strong.style.display = "block";
                     h2.style.display = "block";
@@ -246,6 +251,7 @@
                     progress.style.display = "none";
                     p.style.display = "none";
                     greeBar.style.width = "100%";
+                    loader.style.display = "none";
                     greeBar.innerHTML = "100%";
                     strong.style.display = "block";
                     h2.style.display = "block";
